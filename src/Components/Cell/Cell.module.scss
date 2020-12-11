@@ -1,0 +1,73 @@
+$dark:  rgb(77, 70, 70);
+$light: rgb(155, 155, 155);
+$medium: rgb(104, 95, 91);
+$no2: #eee4da;
+$no4: #eee1c9;
+$no8: #f3b27a;
+$no16: #f69664;
+$no32: #f77c5f;
+$no64: #f75f3b;
+$no128: #edd073;
+$no256: #fcd658;
+$no512: #f8ca33;
+$no1k: #ffc60a;
+$no2k: #ffe600;
+
+.cell {
+    padding: 20px;
+    height: 50px;
+    width: 50px;
+    margin: 0 0 10px 10px;
+    background-color: $medium;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 700;
+    border-radius: 2px;
+    color: $medium;
+}
+
+.activeCell > content {
+    color: $dark;
+}
+
+[id='2'].activeCell{
+    background-color: $no2;
+}
+
+[id='4'].activeCell{
+    background-color: $no4;
+}
+
+[id='8'].activeCell{
+    background-color: $no8;
+}
+
+[id='16'].activeCell{
+    background-color: $no16;
+}
+
+[id='32'].activeCell{
+    background-color: $no32;
+}
+
+[id='64'].activeCell{
+    background-color: $no64;
+}
+
+[id='128'].activeCell{
+    background-color: $no128;
+}
+[id='256'].activeCell{
+    background-color: $no256;
+}
+[id='512'].activeCell{
+    background-color: $no512;
+}
+[id='1024'].activeCell{
+    background-color: $no1k;
+}
+[id='2048'].activeCell{
+    background-color: $no2k;
+}
