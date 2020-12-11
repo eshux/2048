@@ -71,3 +71,19 @@ $no2k: #ffe600;
 [id='2048'].activeCell{
     background-color: $no2k;
 }
+
+@media only screen and (max-height: 600px) {
+    
+    .cell {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media only screen and (max-height: 490px) {
+    
+    .cell {
+        height: 20px;
+        width: 20px;
+    }
+}

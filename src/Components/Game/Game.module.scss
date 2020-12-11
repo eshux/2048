@@ -50,3 +50,47 @@
         padding: 10px 10px 0 0;
     }
 }
+
+@media only screen and (max-height: 600px) {
+    
+    .title {
+        font-size: 160px;
+    }
+
+    .layout {
+        padding-top: 135px;
+    }
+}
+
+@media only screen and (max-height: 490px) {
+    
+    .title {
+        font-size: 130px;
+    }
+
+    .layout {
+        padding-top: 110px;
+    }
+}
+
+@media only screen and (max-height: 420px) {
+    
+    .title {
+        font-size: 60px;
+    }
+
+    .layout {
+        padding-top: 60px;
+    }
+}
+
+@media only screen and (max-height: 370px) {
+    
+    .title {
+        display: none;
+    }
+
+    .layout {
+        padding-top: 10px;
+    }
+}
