@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import style from './Game.module.scss';
 import Grid from '../Grid/Grid';
