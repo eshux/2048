@@ -35,6 +35,7 @@ if (!localsc) {
 const Game = () => {
   const [data, setData] = useState(gameData);
   const [gameOver, setGameOver] = useState(false);
+  const [winner, setWinner] = useState(false);
   const [score, setScore] = useState(0);
   const [localScore, setLocalScore] = useState(localsc);
 
@@ -75,7 +76,18 @@ const Game = () => {
       checkColumn(data);
       checker(setGameOver);
     }
+    checkWinner();
   }, [data]);
+
+  const checkWinner = () => {
+    data.forEach((item: number[]) => {
+      item.forEach((it) => {
+        if (it === 2048) {
+          setWinner(true);
+        }
+      });
+    });
+  };
 
   // Set score in local storage
   useEffect(() => {
@@ -93,6 +105,7 @@ const Game = () => {
     addNumber(newGrid);
     setData(newGrid);
     setGameOver(false);
+    setWinner(false);
     resetScore();
     const local = JSON.parse(localStorage.getItem('2048Score')!);
     local > scorePoints[0]
@@ -104,7 +117,7 @@ const Game = () => {
     <div className={style.layout}>
       <div className={style.title}>2048</div>
       <div className={style.buttonWrapper}>
-        <GameOver over={gameOver} score={score} />
+        <GameOver over={gameOver} win={winner} score={score} />
         <Button text="New Game" onClick={newGame} />
         <HowToPlay />
       </div>
